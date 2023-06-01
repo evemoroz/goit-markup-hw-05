@@ -623,3 +623,22 @@ a:focus {
 .header-logo:focus {
   color: currentColor;
 }
+
+.is-hidden .modal-box {
+  transform: scale(0);
+}
+
+.modal-box {
+  height: 581px;
+  width: 528px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  transition: transform;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}

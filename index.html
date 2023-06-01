@@ -58,7 +58,7 @@
             <h1 class="title main-section-title">
               EFFECTIVE SOLUTIONS FOR YOUR BUSINESS
             </h1>
-            <button class="hero-button" type="button">
+            <button data-modal-open class="hero-button" type="button">
               Request our service
             </button>
           </div>
@@ -389,5 +389,15 @@
         </div>
       </footer>
     </div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-box">
+        <button class="button-main-open" data-modal-close type="button">
+          <svg class="icon icon-modal-close">
+            <use xlink:href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
