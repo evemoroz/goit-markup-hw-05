@@ -12,3 +12,5 @@
     refs.modal.classList.toggle("is-hidden");
   }
 })();
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
