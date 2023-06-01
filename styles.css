@@ -233,6 +233,8 @@ ul {
   padding: 50px 215px 94px;
   margin: 0;
   gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .image-text {
@@ -442,12 +444,12 @@ a:focus {
   width: 370px;
   height: 404px;
   margin: 0;
+  position: relative;
 }
 
 .portfolio-cards {
-  margin: 0;
+  margin: auto;
   width: 1200px;
-  padding-left: 215px;
   padding-bottom: 94px;
 }
 
@@ -496,6 +498,9 @@ a:focus {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+.icons-list > a {
+  border-radius: 50%;
 }
 
 .nav-list a:hover,
@@ -673,8 +678,9 @@ a:focus {
   margin: auto;
 }
 
-.is-hidden .modal-box {
+.is-hidden .modal {
   transform: scale(0);
+  opacity: 0;
 }
 
 /* The Close Button */
@@ -692,4 +698,60 @@ a:focus {
 .icon-modal-vector {
   width: 11px;
   height: 11px;
+}
+
+*:hover,
+*:focus {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.overlay {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47, 48, 58, 0.8);
+  z-index: 2;
+  transform: translate(0, -105%);
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.about-projects-description {
+  background: rgba(33, 150, 243, 0.9);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  width: 370px;
+  height: 294px;
+  transform: translateY(100%);
+  transition: transform 250ms;
+}
+.about-projects-description p {
+  margin: 0;
+
+  padding: 63px 24px 91px 24px;
+}
+.portfolio-cards .card-items:hover .about-projects-description,
+.portfolio-cards .card-items:focus .about-projects-description {
+  transform: translateY(0);
 }
