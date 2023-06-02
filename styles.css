@@ -430,8 +430,9 @@ a:focus {
 
 .btn-section {
   border-top: 1px solid #ececec;
-  padding: 92px 542px 50px;
-  width: fit-content;
+  padding: 92px 0 50px 0;
+  margin: auto;
+  width: 1200px;
 }
 /* Cards Section */
 .card-items {
