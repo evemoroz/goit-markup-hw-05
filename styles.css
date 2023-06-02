@@ -721,16 +721,6 @@ a:focus {
 
 a.active {
   color: var(--link-hover-color);
-
-  border-radius: 2px;
-}
-
-li.active::after,
-li.active:hover {
-  border-bottom: 4px solid #2196f3;
-  padding-bottom: 28px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
 }
 
 *:hover,
