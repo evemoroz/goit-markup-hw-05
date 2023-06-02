@@ -502,14 +502,7 @@ a:focus {
 .links a:hover,
 .links a:focus {
   border-bottom: 4px solid #2196f3;
-  padding-bottom: 29px;
-  border-radius: 2px;
-}
-
-.links a::after {
-  content: "";
-  border-bottom: 4px solid #2196f3;
-  padding-bottom: 20px;
+  padding-bottom: 28px;
   border-radius: 2px;
 }
 
@@ -793,3 +786,11 @@ li.active:hover {
   letter-spacing: 0.03em;
   color: #ffffff;
 }
+/*
+.test1::after {
+  content: "";
+  border-bottom: 4px solid #2196f3;
+  padding-bottom: 20px;
+  border-radius: 2px;
+}
+*/
