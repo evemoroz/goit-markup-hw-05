@@ -445,6 +445,7 @@ a:focus {
   height: 404px;
   margin: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-cards {
@@ -700,6 +701,12 @@ a:focus {
   height: 11px;
 }
 
+a.active {
+  color: var(--link-hover-color);
+
+  border-radius: 2px;
+}
+
 *:hover,
 *:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -729,29 +736,46 @@ a:focus {
   color: #ffffff;
 }
 
-.about-projects-description {
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: rgba(33, 150, 243, 0.9);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition-property: top, right, bottom, left;
+  transition: transform 250ms;
+  transition-timing-function: 101%;
+  z-index: 2;
+  transform: translateY(100%);
+}
+
+.portfolio-overlay p {
+  margin: 0;
+  padding: 63px 24px 91px 24px;
+}
+
+.item:hover .portfolio-overlay,
+.item:focus .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.item {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.item .text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
-  position: absolute;
-  z-index: 2;
-  margin: 0;
-  width: 370px;
-  height: 294px;
-  transform: translateY(100%);
-  transition: transform 250ms;
-}
-.about-projects-description p {
-  margin: 0;
-
-  padding: 63px 24px 91px 24px;
-}
-.portfolio-cards .card-items:hover .about-projects-description,
-.portfolio-cards .card-items:focus .about-projects-description {
-  transform: translateY(0);
 }
